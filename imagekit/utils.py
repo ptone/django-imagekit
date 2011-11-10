@@ -36,7 +36,7 @@ def get_spec_files(instance):
 def open_image(target):
     target.seek(0)
     img = Image.open(target)
-    img.copy = types.MethodType(_wrap_copy(img.copy), img, img.__class__)
+    # img.copy = types.MethodType(_wrap_copy(img.copy), img, img.__class__)
     return img
 
 
